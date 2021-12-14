@@ -1,6 +1,6 @@
-###### Myntra Website Clone Project
+# Myntra Website Clone Project
 
-# Features
+## Features
 
 We have to build this website with these features which is mention below :-
 
