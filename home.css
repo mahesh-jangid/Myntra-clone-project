@@ -1,0 +1,406 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Shippori Antique", sans-serif;
+}
+
+.navbar {
+  background-color: rgb(255, 255, 255);
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  border-bottom: 1px solid rgb(214, 208, 208);
+  height: 6.6rem;
+    box-shadow: rgb(0 0 0 / 45%) 0px 4px 49px -25px;
+    transition: height .4s ease-in;
+
+}
+
+.nav_info {
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: space-between;
+  height: 7rem;
+  margin: auto;
+  transition: height .4s ease-in;
+}
+.active {
+      height: 6rem;
+
+}
+.nav_info .logo {
+  width: 70px;
+  height: auto;
+}
+
+.nav_info .logo img {
+  width: 150px;
+  height: auto;
+}
+.mobile_menu {
+  display: none;
+}
+.nav_info .nav_links {
+  flex-basis: 30%;
+}
+
+.nav_info .nav_links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_info .nav_links ul li {
+  padding: 2.3rem 2rem;
+  list-style-type: none;
+  transition: border 0.4s ease-in;
+  cursor: pointer;
+}
+
+.nav_info .nav_links ul li:nth-child(even):hover {
+  border-bottom: 4px solid #fc427b;
+}
+.nav_info .nav_links ul li:nth-child(odd):hover {
+  border-bottom: 4px solid #0be916;
+}
+
+.nav_info .nav_links ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(27, 25, 25);
+}
+
+.nav_info .search_bar {
+  width: 27%;
+  padding: 6px 20px;
+  border: 1px solid rgb(230, 227, 227);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(250, 248, 248);
+  border-radius: 9px;
+}
+
+.nav_info .search_bar span {
+  display: grid;
+  place-content: center;
+  margin-right: 4pxs;
+}
+
+.nav_info .search_bar i {
+  color: rgb(10, 10, 10);
+}
+
+.nav_info .search_bar i {
+  color: rgb(10, 10, 10);
+}
+
+.nav_info .search_bar #search_box {
+  width: 100%;
+  height: 100%;
+  padding: 6px 18px;
+  border: none;
+  font-size: 15px;
+  background-color: rgb(250, 248, 248);
+}
+
+/* ----------------for search bg ---------------- */
+.search_bg_light {
+  background-color: white;
+}
+
+.nav_info .search_bar #search_box:focus {
+  outline: none;
+}
+
+/* ---------------------Desktop Action css------------------------------- */
+
+.nav_info .desktop_actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+      height: 6rem;
+}
+/* ------------------profile CSS----------- */
+.nav_info .desktop_actions .profile_info {
+  position: absolute;
+  top: 6rem;
+  right: 2.32rem;
+  width: 100%;
+  padding: 4px 8px;
+  background-color: rgb(255, 255, 255);
+  z-index: 999;
+  box-shadow: rgba(250, 248, 248, 0.979) 0px 25px 20px -20px;
+  border-top: 3px solid red;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s ease-in;
+  border-radius: 3px;
+}
+
+.nav_info .desktop_actions .profile_info.show_profile {
+  visibility: visible;
+  opacity: 1;
+
+}
+.nav_info .desktop_actions .profile_info .user_name {
+  padding-left: 20px;
+  font-weight: 900;
+  font-size: 15px;
+}
+.nav_info .desktop_actions .profile_info .profile_links ul {
+  padding-left: 20px;
+}
+.nav_info .desktop_actions .profile_info .profile_links ul li {
+  list-style-type: none;
+}
+.nav_info .desktop_actions .profile_info .profile_links ul li a {
+  text-decoration: none;
+  font-size: 12px;
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: 400;
+  color: black;
+}
+/* ------------------End of profile CSS----------- */
+
+.nav_info .desktop_actions .desktop_view {
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav_info .desktop_actions .desktop_view .icon a{
+  color: initial;
+}
+.nav_info .desktop_actions .desktop_view .icon i {
+  font-size: 17px;
+}
+
+/* -------------selected wishlist item css----------------------  */
+.nav_info .desktop_actions .desktop_view .wishlist_icon,
+.nav_info .desktop_actions .desktop_view .bag_icon {
+  position: relative;
+}
+
+.nav_info .desktop_actions .desktop_view .wishlist_icon span,
+.nav_info .desktop_actions .desktop_view .bag_icon span {
+  position: absolute;
+  display: block;
+  width: 19px;
+  height: 19px;
+  background-color: #eb4d4b;
+  color: white;
+  top: -11px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.nav_info .desktop_actions .desktop_view .title {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+/* -------------End of selected wishlist item css----------------------  */
+
+/* -------------Carousel CSS----------------------  */
+
+.carousel {
+  margin-top: 5rem;
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+}
+
+.carousel .btn_cont {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 97%;
+  margin: auto;
+}
+
+.carousel .btn_cont i {
+  font-size: 30px;
+  color: tomato;
+  cursor: pointer;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------End Carousel CSS----------------------  */
+.deal_container {
+  width: 97%;
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+
+.deal_container .deals_title {
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: rgb(51, 46, 46);
+  margin-bottom: 5rem;
+  text-transform: uppercase;
+}
+
+.deal_container .deal_info {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-column-gap: 1.55rem;
+  grid-row-gap: 1.55rem;
+}
+.deal_container .deal_info .item_card img {
+  width: 100%;
+  height: 100%;
+}
+.deal_container .deal {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 230px;
+  grid-column-gap: 1.55rem;
+}
+
+.deal_container .deal .item img {
+  width: 100%;
+  height: 100%;
+}
+.deal_container .brand {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 300px;
+  grid-column-gap: 1.55rem;
+}
+.deal_container .brand .item img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ------------------footer ------------------------ */
+.footer {
+  width: 100%;
+  height: 6rem;
+}
+.footer p {
+  text-align: center;
+}
+.footer p i {
+  color: red;
+}
+
+/* ------------------end footer ------------------------ */
+
+/* -------------------------------------Media Query CSS-------------------------------------- */
+@media only screen and (min-width: 0px) and (max-width: 465px) {
+  .navbar {
+    height: 5rem;
+  }
+  .nav_info {
+    width: 100%;
+    height: 5rem;
+  }
+  .nav_info .search_bar {
+    display: none;
+  }
+  .mobile_menu {
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .mobile_menu i {
+    font-size: 20px;
+    color: #eb4d4b;
+    cursor: pointer;
+  }
+  .nav_info .nav_links {
+    display: none;
+  }
+  .desktop_actions {
+    margin-right: 10px;
+  }
+  .nav_info .logo img {
+    width: 60px;
+    height: auto;
+  }
+  .carousel {
+    height: 150px;
+  }
+  /* --------------deals ---------------- */
+  .deal_container .deals_title {
+    font-size: 16px;
+    text-align: center;
+  }
+  .deal_container .deal {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fit, 400px);
+  }
+  .deal_container .brand {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto-fit, 400px);
+    grid-column-gap: 1.55rem;
+  }
+  .footer {
+    width: 70%;
+    margin: auto;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 466px) and (max-width: 1024px) {
+
+  .carousel {
+    height: 450px;
+  }
+  /* --------------deals ---------------- */
+  .deal_container .deals_title {
+    font-size: 16px;
+    text-align: center;
+  }
+  .deal_container .deal {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, 173px);
+  }
+  .deal_container .brand {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit);
+    grid-column-gap: 1.55rem;
+  }
+  .footer {
+    width: 70%;
+    margin: auto;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+}
