@@ -317,7 +317,6 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 300px;
   grid-column-gap: 1.55rem;
 }
 .deal_container .brand .item img {
@@ -581,6 +580,16 @@ body {
     margin-bottom: 0px;
     margin-top: 0px;
     font-size: 11px;
+  }
+  .main .product_container .product_info .product .overlay_card{
+      left: 0;
+      right: 0;
+          bottom: -2.8rem;
+  }
+  .main .product_container .product_info .product .content h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 13px;
   }
 }
 @media only screen and (min-width: 466px) and (max-width: 1024px) {

@@ -236,9 +236,13 @@ function DisplayData(productData) {
               </button>
             </div>`;
 
+    // productDiv.append(htmlData);
+
+    // prod_container.append(productDiv);
+    // console.log(prod_container);
     productDiv.insertAdjacentHTML("afterbegin", htmlData);
 
-    prod_container.appendChild(productDiv);
+    prod_container.append(productDiv);
 
     var wishlist_btn = productDiv.querySelectorAll("button");
     var wish_btn_text = productDiv.querySelector(".wish_btn_text");
@@ -269,3 +273,17 @@ function addInwishlist(whishProd) {
   wishListArray.push(whishProd);
   localStorage.setItem("WishListItems", JSON.stringify(wishListArray));
 }
+
+// ---------------------------In profile Section Show User Name-------------------------///
+var currentLoggedUser = JSON.parse(localStorage.getItem("currentLoggedUser"));
+
+var user_name = document.querySelector(".user_name");
+user_name.textContent = `Hello ${currentLoggedUser}`;
+
+var log_out = document.querySelector("#log_out");
+log_out.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  localStorage.removeItem("currentLoggedUser");
+  window.location = "login.html";
+});
