@@ -1,0 +1,38 @@
+#container{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    font-family: Whitney,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.wishEmptyButton{
+    border: 1px solid #3466e8;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14.5px 51px;
+    color: #3466e8;
+    cursor: pointer;
+    display: inline-block;
+}
+#container>div>a{
+    text-decoration: none;
+    color: #3466e8;
+    background-color: transparent;
+}
+.icon1{
+    width: 25%;
+    height: 9%;
+    margin: auto;
+    margin-bottom: 15%;
+    margin-top:10% ;
+}
+.icon1>img{
+    width: 100%;
+    height: 100%;
+}
+
+.para{
+    color: #94989f;
+    text-align: center;
+}
