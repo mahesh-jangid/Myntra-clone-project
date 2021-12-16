@@ -8,7 +8,7 @@
 
   position: fixed;
   display: grid;
-  grid-template-rows: 80px 583px;
+  grid-template-rows: 100px 583px;
 }
 
 /* navigation part */
@@ -43,13 +43,14 @@
 /* nav end */
 
 /* main div */
-.main {
+.main_content {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   background-color: #fdeeef;
+  width: 100%;
 }
 /* inside main one div*/
-.main > div {
+.main_content>div {
   width: 30%;
   background-color: white;
   margin: auto;
@@ -58,11 +59,11 @@
 
 /* inside two divs for one for image and one input and links */
 
-.main > div > div:nth-child(1) {
+.main_content>div>div:nth-child(1) {
   width: 100%;
   height: 40%;
 }
-.main > div > div:nth-child(2) {
+.main_content>div>div:nth-child(2) {
   width: 100%;
   height: 60%;
 }

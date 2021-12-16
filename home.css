@@ -1,8 +1,13 @@
+ss a {
+  color: black;
+}
+
 body {
+  font-family: "Shippori Antique", sans-serif;
+  text-decoration: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Shippori Antique", sans-serif;
 }
 
 .navbar {
@@ -12,9 +17,8 @@ body {
   z-index: 1000;
   border-bottom: 1px solid rgb(214, 208, 208);
   height: 6.6rem;
-    box-shadow: rgb(0 0 0 / 45%) 0px 4px 49px -25px;
-    transition: height .4s ease-in;
-
+  box-shadow: rgb(0 0 0 / 45%) 0px 4px 49px -25px;
+  transition: height 0.4s ease-in;
 }
 
 .nav_info {
@@ -24,11 +28,10 @@ body {
   justify-content: space-between;
   height: 7rem;
   margin: auto;
-  transition: height .4s ease-in;
+  transition: height 0.4s ease-in;
 }
 .active {
-      height: 6rem;
-
+  height: 6rem;
 }
 .nav_info .logo {
   width: 70px;
@@ -124,7 +127,7 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
-      height: 6rem;
+  height: 6rem;
 }
 /* ------------------profile CSS----------- */
 .nav_info .desktop_actions .profile_info {
@@ -135,18 +138,17 @@ body {
   padding: 4px 8px;
   background-color: rgb(255, 255, 255);
   z-index: 999;
-  box-shadow: rgba(250, 248, 248, 0.979) 0px 25px 20px -20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   border-top: 3px solid red;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .4s ease-in;
+  transition: opacity 0.4s ease-in;
   border-radius: 3px;
 }
 
 .nav_info .desktop_actions .profile_info.show_profile {
   visibility: visible;
   opacity: 1;
-
 }
 .nav_info .desktop_actions .profile_info .user_name {
   padding-left: 20px;
@@ -167,6 +169,25 @@ body {
   font-weight: 400;
   color: black;
 }
+
+.nav_info .desktop_actions .profile_info .profile_links .welcome_title {
+  font-size: 16px;
+  line-height: 26px;
+  padding: 0 8px;
+}
+.nav_info .desktop_actions .profile_info .profile_links .signUp li {
+  border: 0.23px solid gray;
+  /* margin-top: 10px; */
+  text-align: center;
+  margin-right: 16px;
+  padding: 6px 19px;
+}
+.nav_info .desktop_actions .profile_info .profile_links .signUp li a {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fc427b;
+}
 /* ------------------End of profile CSS----------- */
 
 .nav_info .desktop_actions .desktop_view {
@@ -175,7 +196,7 @@ body {
   cursor: pointer;
 }
 
-.nav_info .desktop_actions .desktop_view .icon a{
+.nav_info .desktop_actions .desktop_view .icon a {
   color: initial;
 }
 .nav_info .desktop_actions .desktop_view .icon i {
@@ -188,19 +209,23 @@ body {
   position: relative;
 }
 
+.nav_info .desktop_actions .desktop_view   h5{
+  font-size: 12px;
+}
 .nav_info .desktop_actions .desktop_view .wishlist_icon span,
 .nav_info .desktop_actions .desktop_view .bag_icon span {
   position: absolute;
-  display: block;
+  /* display: block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
   width: 19px;
   height: 19px;
   background-color: #eb4d4b;
   color: white;
   top: -11px;
   right: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   border-radius: 50%;
 }
 
@@ -314,6 +339,148 @@ body {
 
 /* ------------------end footer ------------------------ */
 
+/* -------------------------------product Page section CSS---------------------------- */
+
+.location_link {
+  width: 98%;
+  margin: auto;
+  margin-top: 1.7rem;
+}
+.location_link a {
+  text-decoration: none;
+  color: black;
+}
+.flex{
+  display: flex;
+  width: 97%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex #sort {
+  margin: 0;
+  padding: 10px 19px;
+  float: right;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+}
+.main .filter_container {
+  width: 17%;
+}
+.main .filter_container .filter_info {
+  border: 1px solid rgb(247, 241, 241);
+  border-bottom: none;
+  height: 100vh;
+  padding: 10px 20px;
+}
+.main .filter_container .filter_info .pt {
+  padding: 17px 0;
+}
+.main .filter_container .filter_info .pt input {
+  margin-right: 0.6rem;
+  width: 16px;
+  height: 16px;
+}
+.main .filter_container .filter_info .pt label {
+     font-size: 14px;
+}
+.main .filter_container .filter_info .pt h5 {
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 0.7rem;
+}
+
+.main .product_container {
+  width: 83%;
+}
+
+.main .product_container .product_info {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 227px);
+  grid-gap: 10px;
+  border: 1px solid rgb(238, 232, 232);
+  padding: 23px 32px;
+}
+.main .product_container .product_info .product {
+  width: 96%;
+  height: 70%;
+  object-fit: cover;
+  position: relative;
+  cursor: pointer;
+}
+.main .product_container .product_info .product img {
+  width: 100%;
+  height: 100%;
+}
+.main .product_container .product_info .product .content { 
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  border-top: none;
+  border-top: none;
+  margin-top: -3px;
+  padding: 5px 9px;
+}
+.main .product_container .product_info .product .content p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.main .product_container .product_info .product .content h4 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.main .product_container .product_info .product .content h4 span:nth-child(2){
+  margin-left: 10px;
+  text-decoration: line-through;
+  font-weight: 300;
+  font-size: 13px;
+  
+}
+.main .product_container .product_info .product .overlay_card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3.8rem;
+  width: 100%;
+  height: 30%;
+  background-color: rgb(255, 255, 255);
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.main .product_container .product_info .product .overlay_card button {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  border: 1px solid rgb(238, 230, 230);
+  background-color: white;
+}
+.main .product_container .product_info .product .overlay_card button i {
+  font-size: 16px;
+  margin-right: 4px;
+}
+.main .product_container .product_info .product .overlay_card button a {
+  text-decoration: none;
+  color: black;
+}
+.main .product_container .product_info .product:hover .overlay_card {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------------End of product Page section CSS---------------------------- */
+
 /* -------------------------------------Media Query CSS-------------------------------------- */
 @media only screen and (min-width: 0px) and (max-width: 465px) {
   .navbar {
@@ -375,7 +542,6 @@ body {
   }
 }
 @media only screen and (min-width: 466px) and (max-width: 1024px) {
-
   .carousel {
     height: 450px;
   }
