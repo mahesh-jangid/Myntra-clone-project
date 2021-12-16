@@ -95,6 +95,62 @@ var productData = [
     price: 274,
     strick_price: 449,
   },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1072681/2020/1/20/9de2d7dc-e239-4327-b7d0-096c80ac3a121579503443912-Roadster-Men-Charcoal-Melange-Printed-Round-Neck-T-shirt-364-1.jpg",
+    brand_name: "Roadster",
+    brand_info: "Graphic Cotton T-shirt",
+    price: 274,
+    strick_price: 449,
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15684128/2021/9/29/b5431385-c8c1-443c-998e-5c0338678c321632916963014Tshirts1.jpg",
+    brand_name: "Puma",
+    brand_info: "Men Brand Logo T-shirt",
+    price: 519,
+    strick_price: 1200,
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/14311832/2021/6/9/54495702-1699-4c62-98f2-17f17ee824361623221780997Mens100CottonSlimBlackTShirtTshirtsLouisPhilippeMenTshirtsLo1.jpg",
+    brand_name: "Louis Philippe Sport",
+    brand_info: "Men Polo Collar T-shirt",
+    price: 719,
+    strick_price: 1199,
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/16467472/2021/12/11/108c2994-dbc3-4ef6-b710-ec5c39db26331639234129544DukeMenBluePoloCollarPocketsT-shirt1.jpg",
+    brand_name: "Duke",
+    brand_info: "Men Polo Collar T-shirt",
+    price: 675,
+    strick_price: 799,
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2314372/2018/6/19/29e8ddfd-6f5f-43fd-8b71-dfa8ac6cef681529385860869-HRX-by-Hrithik-Roshan-Men-Charcoal-Grey-Slim-Advanced-Rapid--1.jpg",
+    brand_name: "HRX by Hrithik Roshan",
+    brand_info: "Slim Rapid Raglan T-shirt",
+    price: 494,
+    strick_price: 899,
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2020/10/4/819e87da-c794-4f6d-aa0d-24e389387a491601768974425-1.jpg",
+    brand_name: "Rigo",
+    brand_info: "High Neck Slim T-shirt",
+    price: 439,
+    strick_price: 999,
+  },
+  {
+    image:
+      "https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2314372/2018/6/19/29e8ddfd-6f5f-43fd-8b71-dfa8ac6cef681529385860869-HRX-by-Hrithik-Roshan-Men-Charcoal-Grey-Slim-Advanced-Rapid--1.jpg",
+    brand_name: "Bewakoof",
+    brand_info: "Pure Cotton T-shirt",
+    price: 329,
+    strick_price: 399,
+  },
 ];
 
 // -----------------------Navbar animation----------------------------//
@@ -132,13 +188,13 @@ profile_icon.addEventListener("click", function () {
 });
 // -------------End of Profile Card---------------////
 
-// ---------------------For Adding Wishlist Products -----------------------------///
+// -----------------------------------------------For Adding Wishlist Products -----------------------------///
 
 var display = JSON.parse(localStorage.getItem("AllproductItem")) || [];
 
 var wishListArray = JSON.parse(localStorage.getItem("WishListItems")) || [];
 
-// ---------------For Showing Total Wishlist Items---------------------///////////
+// ---------------For Showing Total Wishlist Items---------------------///
 
 var getTotalWishListData = JSON.parse(
   localStorage.getItem("totalWishListItems")

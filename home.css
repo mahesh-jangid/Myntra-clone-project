@@ -402,6 +402,7 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(5, 227px);
+  grid-template-rows: repeat(1fr);
   grid-gap: 10px;
   border: 1px solid rgb(238, 232, 232);
   padding: 23px 32px;
@@ -427,6 +428,7 @@ body {
 .main .product_container .product_info .product .content p {
   margin-bottom: 0px;
   margin-top: 0px;
+  font-size: 14px;
 }
 .main .product_container .product_info .product .content h4 {
   margin-top: 2px;
@@ -610,10 +612,10 @@ body {
     font-size: 14px;
   }
 .main .filter_container {
-  width: 40%;
+       width: 22%;
 }
 .main .product_container {
-  width: 63%;
+  width: 73%;
 }
   .main .product_container .product_info{
      grid-template-columns: repeat(3, 1fr);
