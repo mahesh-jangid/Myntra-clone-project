@@ -17,8 +17,6 @@
     />
     <link rel="stylesheet" href="Assets/css/home.css" />
     <link rel="stylesheet" href="Assets/css/wishlist.css" />
-        <!-- <link rel="stylesheet" href="signUp.css" /> -->
-
   </head>
   <body>
     <!--------------------------Start Navbar ----------------------------->
@@ -49,7 +47,7 @@
           </div>
           <div class="wishlist_section desktop_view">
             <div class="icon wishlist_icon">
-              <a href=""><i class="far fa-heart"></i></a>
+              <a href="whishlist.html"><i class="far fa-heart"></i></a>
               <span><h5 id="wishlist_items">0</h5></span>
             </div>
             <div class="title wishlist_title">Wishlist</div>
@@ -69,11 +67,11 @@
               <ul>
                 <li><a href="order.html">Order</a></li>
 
-                <li><a href="wishlist.html">Whishlist</a></li>
+                <li><a href="whishlist.html">Whishlist</a></li>
                 <li><a href="home.html">Contanct Us</a></li>
                 <hr />
                 <li><a href="">Edit Profile</a></li>
-                <li><a href="" id="log_out">Logout</a></li>
+                <li><a href="">Logout</a></li>
               </ul>
             </div>
           </div>
@@ -87,14 +85,23 @@
     <!----------------------End Of Navbar----------------------------->
 
     <!--------------------------Body Section-------------------------->
-    <div class="product_container">
-      <h2>My Wishlist <span class="totalWishlist">0</span></h2>
-      <!-- ------------------single Product----------------- -->
-      <div class="product_info"> </div>
+    <div id="container">
+      <h3>YOUR WISHLIST IS EMPTY</h3>
+      <div class="para">
+        Add items that you like to your wishlist. Review them anytime and easily
+        move them to the bag.
+      </div>
+      <div class="icon1">
+        <img
+          src="https://docs.google.com/uc?id=1byBq4eAB0IAzeJED8JaA7-mcuZX29m-1"
+          alt=""
+        />
+      </div>
+      <div class="wishEmptyButton">
+        <a href="home.html">CONTINUE SHOPPING</a>
       </div>
     </div>
     <!----------------------End of Body Section----------------------->
   </body>
-  
-  <script src="script/wishlist.js"></script>
+  <script src="script/main.js"></script>
 </html>

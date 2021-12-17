@@ -1,0 +1,162 @@
+body {
+  font-family: "Shippori Antique", sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #ff3c6f;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.product_container {
+  margin-top: 3rem;
+  width: 95%;
+  margin: auto;
+}
+.product_container >h2{
+    font-size: 18px;
+        font-size: 20px;
+        font-weight: bold;
+}
+.product_container>h2 .totalWishlist {
+    font-weight: lighter;
+    font-size: 16px;
+
+}
+.product_container .product_info {
+  display: grid;
+    grid-template-columns: repeat(4, minmax(390px, 1fr));
+    grid-template-rows: repeat(auto-fit, 560px);
+  grid-column-gap: 10px;
+  grid-row-gap: 8px;
+  border: 1px solid rgb(238, 232, 232);
+  padding: 29px 40px;
+}
+.product_container .product_info .product {
+  width: 83%;
+  height: 53%;
+  object-fit: cover;
+  position: relative;
+  cursor: pointer;
+}
+
+.product_container .product_info .product img {
+  width: 100%;
+  height: 100%;
+}
+.product_container .product_info .product .content {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  border-top: none;
+  border-top: none;
+  padding: 5px 9px;
+  height: 129px;
+  text-align: center;
+}
+.product_container .product_info .product .content p {
+  margin-bottom: 0px;
+  margin-top: 0px;
+      font-size: 16px;
+}
+
+.product_container .product_info .product .content h4 {
+  margin-top: 2px;
+  margin-bottom: 1px;
+
+}
+
+.product_container .product_info .product .content h4 span:nth-child(2) {
+      margin-left: 22px;
+      text-decoration: line-through;
+      font-weight: 300;
+      font-size: 12px;
+}
+.product_container .product_info .product .content .w_btn {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid rgb(238, 230, 230);
+  background-color: white;
+}
+
+
+/* ----------------------------Error Page CSS------------------------- */
+#container {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wishEmptyButton {
+    border: 1px solid #3466e8;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14.5px 51px;
+    color: #3466e8;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#container>div>a {
+    text-decoration: none;
+    color: #3466e8;
+    background-color: transparent;
+}
+
+.icon1 {
+    width: 25%;
+    height: 9%;
+    margin: auto;
+    margin-bottom: 15%;
+    margin-top: 10%;
+}
+
+.icon1>img {
+    width: 100%;
+    height: 100%;
+}
+
+.para {
+    color: #94989f;
+    text-align: center;
+}
+  
+
+
+     /* -------------------------------------Media Query ----------------------------------- */
+     @media only screen and (min-width: 0px) and (max-width: 465px) {
+
+        .product_container {
+            width: 100%;
+            margin: auto;
+        }
+         .product_container .product_info {
+                   grid-template-columns: repeat(1, 328px);
+                   grid-template-rows: repeat(auto-fit, 569px);
+                   grid-row-gap: 0px;
+                   padding: 10px 17px;
+    
+         }
+     }
+     @media only screen and (min-width: 465px) and (max-width: 1024px) {
+
+        .product_container {
+                width: 114%;
+                margin: auto;
+        }
+         .product_container .product_info {
+                grid-template-columns: repeat(2, 413px);
+                grid-template-rows: repeat(auto-fit, 635px);
+                grid-row-gap: 0px;
+    
+         }
+     }

@@ -47,13 +47,13 @@ sign_in_btn.addEventListener("click", function () {
         regdUserData[i].User_name === user_name &&
         regdUserData[i].phone === user_mobile
       ) {
-        // alert("login Succesfully");
         localStorage.setItem("currentLoggedUser", JSON.stringify(user_name));
         alert_container.classList.add("show_pop_up");
         alert_pop_up.textContent = "login successful";
         alert_pop_up.style.color = "green";
         alert_pop_up.style.letterSpacing = "1px";
         window.location.href = "men.html";
+
         break;
       } else {
         // alert("Login Faliled!!");

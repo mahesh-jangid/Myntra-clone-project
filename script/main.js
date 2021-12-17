@@ -190,10 +190,16 @@ profile_icon.addEventListener("click", function () {
 
 // -----------------------------------------------For Adding Wishlist Products -----------------------------///
 
-var display = JSON.parse(localStorage.getItem("AllproductItem")) || [];
-
+// var getProddisplay = JSON.parse(localStorage.getItem("AllproductItem")) || [];
+var DOM_bag = document.querySelector("#bag_items");
+var DOM_wish = document.querySelector("#wishlist_items");
 var wishListArray = JSON.parse(localStorage.getItem("WishListItems")) || [];
-
+var getTotalBagData = JSON.parse(localStorage.getItem("totalBagItems")) || 0;
+var totalWishListItems =
+  JSON.parse(localStorage.getItem("totalWishListItems")) || 0;
+DOM_bag.textContent = getTotalBagData;
+DOM_wish.textContent = totalWishListItems;
+totalWishListitems();
 // ---------------For Showing Total Wishlist Items---------------------///
 
 var getTotalWishListData = JSON.parse(
@@ -236,10 +242,6 @@ function DisplayData(productData) {
               </button>
             </div>`;
 
-    // productDiv.append(htmlData);
-
-    // prod_container.append(productDiv);
-    // console.log(prod_container);
     productDiv.insertAdjacentHTML("afterbegin", htmlData);
 
     prod_container.append(productDiv);
@@ -264,8 +266,6 @@ function DisplayData(productData) {
       });
     });
   });
-
-  localStorage.setItem("AllproductItem", JSON.stringify(productData));
 }
 // -------------------------End of  Displaying All Products-------------------///
 
@@ -286,4 +286,16 @@ log_out.addEventListener("click", function (e) {
 
   localStorage.removeItem("currentLoggedUser");
   window.location = "login.html";
+});
+
+// -------------------------For Wishlist 404 Page-------------------------///
+var wishlist_icon = document.querySelector(".wishlist_icon");
+var totalWishListItems = JSON.parse(localStorage.getItem("WishListItems"));
+console.log(totalWishListItems);
+wishlist_icon.addEventListener("click", function () {
+  if (totalWishListItems === null) {
+    window.location = "wishlistError.html";
+  } else {
+    window.location = "wishlist.html";
+  }
 });
