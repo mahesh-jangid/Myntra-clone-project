@@ -217,9 +217,9 @@ function totalWishListitems() {
 // ---------------End of  Showing Total Wishlist Items---------------------////
 
 DisplayData(productData);
-
 // -------------------------For Displaying All Products-------------------///
 function DisplayData(productData) {
+  document.querySelector(".product_info").innerHTML = "";
   productData.map(function (elem) {
     var prod_container = document.querySelector(".product_info");
 
@@ -264,6 +264,7 @@ function DisplayData(productData) {
         addInwishlist(elem);
         totalWishListitems();
       });
+      localStorage.setItem("AllProduct", JSON.stringify(productData));
     });
   });
 }
@@ -299,3 +300,24 @@ wishlist_icon.addEventListener("click", function () {
     window.location = "wishlist.html";
   }
 });
+
+// -----------------------------------------For Sort Price -------------------------------///
+
+function handlepricesort() {
+  var selected = document.querySelector("#sort").value;
+
+  if (selected === "low") {
+    productData.sort(function (a, b) {
+      return Number(a.price) - Number(b.price);
+    });
+  }
+  console.log(productData);
+  if (selected === "high") {
+    productData.sort(function (a, b) {
+      return Number(b.price) - Number(a.price);
+    });
+  }
+  localStorage.setItem("shoppingItems", JSON.stringify(productData));
+  DisplayData(productData);
+}
+// -----------------------------------------For Sort Price -------------------------------///

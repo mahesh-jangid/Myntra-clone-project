@@ -74,18 +74,6 @@
               </ul>
             </div>
           </div>
-          <!-- <div class="profile_info">
-            <div class="profile_links">
-              <div class="welcome_title">
-                Welcome <br />
-                To Access Account
-              </div>
-              <hr />
-              <ul class="signUp">
-                <li><a href="signUp.html">LOGIN/SIGNUP</a></li>
-              </ul>
-            </div>
-          </div> -->
           <!------------End of profile Dropdown-------------------->
         </div>
         <div class="mobile_menu">
@@ -104,11 +92,11 @@
     </div>
     <div class="flex">
       <h5>FILTERS</h5>
-      <select name="filter" id="sort">
+      <select name="filter" id="sort" onchange="handlepricesort()">
         <option value="">Sort By : Recommended</option>
         <option value="discount">Better Discount</option>
-        <option value="high_to_low">Price : High to Low</option>
-        <option value="low_to_high">Price : Low to High</option>
+        <option value="high">Price : High to Low</option>
+        <option value="low">Price : Low to High</option>
       </select>
     </div>
     <div class="main">

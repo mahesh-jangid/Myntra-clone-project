@@ -108,13 +108,14 @@ input {
   outline: none;
   border: none;
   line-height: 1.2em;
-  font-size: 15px;
+  font-size: 12px;
   margin-left: 14px;
 }
 label {
-  font-size: 18px;
-  margin-top: 7px;
-  margin-left: 5px;
+font-size: 15px;
+margin-top: 7px;
+margin-left: 5px;
+margin-right: 6px;
 }
 
 .welcome {
@@ -192,7 +193,7 @@ label {
        
      }
 @media only screen and (min-width: 375px) and (max-width: 768px) {
-  .main > div {
+  .main_content>div {
     width: 60%;
     background-color: white;
     margin: auto;
@@ -200,12 +201,12 @@ label {
   }
 }
 @media only screen and (min-width: 0px) and (max-width: 375px) {
-  .main {
+  .main_content {
     display: grid;
     grid-template-columns: auto;
     background-color: #fdeeef;
   }
-  .main > div {
+  .main_content>div {
     width: 60%;
     margin-left: 35px;
     background-color: white;
