@@ -22,6 +22,7 @@ function signup(){
     signUp.push(signUpObj);
 
     localStorage.setItem('userData',JSON.stringify(signUp));
+    window.location.href="login.html";
 }
 
 
