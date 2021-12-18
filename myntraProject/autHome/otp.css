@@ -419,7 +419,7 @@ ss a {
   
   @media only screen and (min-width: 375px) and (max-width: 768px) {
     .main > div {
-      width: 40%;
+      width: 50%;
       background-color: white;
       margin: auto;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -432,7 +432,7 @@ ss a {
       background-color: #fdeeef;
     }
     .main > div {
-      width: 40%;
+      width: 90%;
       margin-left: 40px;
       background-color: white;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
