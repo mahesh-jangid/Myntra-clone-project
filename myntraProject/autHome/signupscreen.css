@@ -316,7 +316,7 @@ ss a {
     background-color: #fdeeef;
   }
   .main > div {
-    width: 25%;
+    width: 28%;
     background-color: white;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -444,9 +444,12 @@ ss a {
       display: grid;
       grid-template-columns: auto;
       background-color: #fdeeef;
+     
     }
     .main > div {
-      width: 40%;
+      width: 80%;
+      height: 700px;
+      margin-top: 20px;
       margin-left: 40px;
       background-color: white;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
