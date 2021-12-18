@@ -217,15 +217,6 @@ function totalWishListitems() {
 
 DisplayData(productData);
 // -------------------------For Displaying All Products-------------------///
-
-// function filterCat() {
-//   var selected = document.querySelector(".category input").value;
-//   console.log(selected);
-//   var filter_list = productData.filter(function (elem) {
-//     return elem.brand_name == selected;
-//   });
-//   DisplayData(filter_list);
-// }
 function DisplayData(productData) {
   document.querySelector(".product_info").innerHTML = "";
   productData.map(function (elem) {

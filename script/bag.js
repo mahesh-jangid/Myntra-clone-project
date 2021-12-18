@@ -1,6 +1,5 @@
 var AllbagProdArray = JSON.parse(localStorage.getItem("AllBagItems")) || [];
-var total_amount = [];
-// showTotal();
+
 DisplayBagData(AllbagProdArray);
 function DisplayBagData(AllbagProdArray) {
   document.querySelector(".bag_prod").innerHTML = "";
@@ -29,24 +28,6 @@ function DisplayBagData(AllbagProdArray) {
 
     prod_container.append(productDiv);
 
-    // -----------------------------Bag Total----------------------------//
-
-    total_amount.push(elem.price);
-
-    var DOM_total = document.querySelector(".total_MRP");
-    function showTotal() {
-      var total_price = total_amount.reduce(function (total, price) {
-        total += price;
-        return total;
-      });
-      // console.log(showTotal());
-      DOM_total.textContent = total_price;
-      // apply.addEventListener("click", discount(total_price));
-    }
-    console.log(total_amount);
-
-    // -----------------------------Bag Total----------------------------//
-
     var remove_btn = productDiv.querySelectorAll(".remove_btn");
 
     remove_btn.forEach(function (btn) {
@@ -68,4 +49,84 @@ function DisplayBagData(AllbagProdArray) {
   }
 }
 
-// -----------------------------Bag Total----------------------------//
+// ----------------------------------------Bag Total----------------------------//
+
+var total_amount = [];
+var DOM_total = document.querySelector(".total_MRP");
+var total_sub = document.querySelector(".total_amount");
+
+AllbagProdArray.map(function (elem) {
+  total_amount.push(elem.price);
+});
+
+var total_amt = total_amount.reduce(function (total, price) {
+  total += price;
+  return total;
+});
+DOM_total.textContent = total_amt;
+total_sub.textContent = total_amt;
+
+// ----------------------------------------Bag Total----------------------------//
+
+// -----------------------------Remove All Item From Bag------------------------------///
+var remove_all = document.querySelector("#remove");
+remove_all.addEventListener("click", function () {
+  localStorage.removeItem("AllBagItems");
+  document.querySelector(".bag_prod").innerHTML = "";
+});
+// -----------------------------Remove All Item From Bag------------------------------///
+
+// ---------------------------Bag Total Items Display ------------------------------------/////
+var Total_Bag_Item = document.querySelector(".total_item");
+var Total_Selected_Item = document.querySelector(".total_selected");
+var totalLength = AllbagProdArray.length;
+console.log(AllbagProdArray);
+Total_Bag_Item.textContent = totalLength;
+Total_Selected_Item.textContent = totalLength;
+// ---------------------------Bag Total Items Display ------------------------------------/////
+
+// ------------------------Show Modal------------------------//
+var coupon_DOM = document.querySelector("#coupon");
+var remove_modal = document.querySelector(".box .fa-times");
+var modal = document.querySelector(".pop_up_container");
+coupon_DOM.addEventListener("click", function () {
+  modal.classList.add("show_modal");
+  document.body.classList.add("show_modal");
+});
+
+remove_modal.addEventListener("click", function () {
+  modal.classList.remove("show_modal");
+  document.body.classList.remove("show_modal");
+});
+// ------------------------Show Modal------------------------//
+
+// -----------------------get Coupon Code value ---------------------///
+JSON.parse(localStorage.getItem("Discount"));
+JSON.parse(localStorage.getItem("TotalSub"));
+SubTotal();
+DisplayBagData(AllbagProdArray);
+function SubTotal() {
+  var apply_code_btn = document.querySelector("#apply");
+  apply_code_btn.addEventListener("click", function () {
+    var coupon_value = document.querySelector("input#coupon").value;
+    var total_discount = document.querySelector(".total_discount");
+    var total_amount = document.querySelector(".total_amount");
+    if (coupon_value === "mahesh") {
+      var discount = (total_amt * 60) / 100;
+      total_discount.textContent = discount;
+      localStorage.setItem("Discount", JSON.stringify(discount));
+      var Final_total = total_amt - discount;
+      total_amount.textContent = Final_total;
+      localStorage.setItem("TotalSub", JSON.stringify(Final_total));
+    }
+  });
+}
+
+// -----------------------get Coupon Code value ---------------------///
+
+// ----------------------payment ---------------------------///
+var place_order_btn = document.querySelector("#order");
+place_order_btn.addEventListener("click", function () {
+  window.location = "payment.html";
+});
+// ----------------------payment ---------------------------///

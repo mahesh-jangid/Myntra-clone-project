@@ -16,9 +16,9 @@
     />
     <link rel="stylesheet" href="Assets/css/home.css" />
     <link rel="stylesheet" href="Assets/css/bag.css" />
-    <title>Document</title>
-  </head>
 
+    <title>Payment & Address Form</title>
+  </head>
   <body>
     <!--------------------------Start Navbar ----------------------------->
     <div class="navbar">
@@ -39,60 +39,58 @@
     </div>
     <!----------------------End Of Navbar----------------------------->
 
+    <div class="location_link">
+      <span><a href="home.html">Home</a></span> /
+      <span><a href="payment.html">payment</a></span>
+    </div>
     <div class="main">
       <div class="left">
         <div class="left_info">
-          <div class="box">
+          <h5>Contact Details</h5>
+          <div class="box pad">
             <div class="content">
-              <h5>Check delivery time & services</h5>
+              <input type="text" placeholder="Enter Name" />
             </div>
-            <button>ENTER PIN CODE</button>
           </div>
-          <div class="offers">
-            <h5>Available Offers</h5>
+          <div class="box pad">
             <div class="content">
-              <h5>Check delivery time & services</h5>
+              <input type="text" placeholder="Enter Name" />
             </div>
           </div>
-          <div class="box">
+          <h5>Address</h5>
+          <div class="box pad">
             <div class="content">
-              <h5>Selected Items :<span class="total_selected"></span></h5>
-            </div>
-            <div class="btn_container">
-              <button id="remove">REMOVE</button>
-              <button id="wishlist">MOVE TO WISHLIST</button>
+              <input type="number" placeholder="Enter Pin code" />
             </div>
           </div>
-          <div class="bag_prod">
-            <!-- -----------------------Single Product ---------------------- -->
-
-            <!-- -----------------------Single Product ---------------------- -->
+          <div class="box pad">
+            <div class="content">
+              <input
+                type="text"
+                placeholder="Address(House No.,Building,street etc.)"
+              />
+            </div>
           </div>
+          <div class="box pad">
+            <div class="content">
+              <input type="text" placeholder="Locality/Town" />
+            </div>
+          </div>
+          <h5>Payment</h5>
+          <div class="box pad">
+            <div class="content">
+              <input type="number" placeholder="Enter Account Number" />
+            </div>
+          </div>
+          <div class="box pad">
+            <div class="content">
+              <input type="text" placeholder="Enter CVV" />
+            </div>
+          </div>
+          <button id="buy" class="order w-f">BUY NOW</button>
         </div>
       </div>
       <div class="right">
-        <div class="box col">
-          <div class="content">
-            <p>DONATE FOR COVID-19 RELIEF</p>
-          </div>
-          <div class="box_info">
-            <input type="checkbox" name="covid" id="covid" />
-            <label for="title">Help India Fight COVID-19</label>
-          </div>
-          <div class="btn_container">
-            <button class="rounded" id="remove">Rs.50</button>
-            <button class="rounded" id="wishlist">Rs.100</button>
-            <button class="rounded" id="wishlist">Rs.150</button>
-            <button class="rounded" id="wishlist">Rs.200</button>
-          </div>
-          <a href="">Know More</a>
-        </div>
-        <div class="box width">
-          <div class="content">
-            <p>Apply Coupons</p>
-          </div>
-          <button id="coupon">ENTER PIN CODE</button>
-        </div>
         <div class="total_price_con">
           <h5>Price Details: <span class="total_item"></span>(Items)</h5>
           <div class="box width extra">
@@ -114,34 +112,12 @@
             </div>
             <h5>Rs. <span class="total_amount">0</span></h5>
           </div>
-          <button id="order" class="order">PLACE ORDER</button>
+          <button id="order" class="order">See Details</button>
         </div>
       </div>
     </div>
-
-    <!-- --------------------------------Pop Up Box For Apply Coupon ------------------- -->
-    <div class="pop_up_container">
-      <div class="input">
-        <div class="box">
-          <div class="content">
-            <h5>Apply Coupon</h5>
-          </div>
-          <i class="fas fa-times"></i>
-        </div>
-      </div>
-      <div class="input">
-        <div class="box">
-          <div class="content">
-            <input type="tel" id="coupon" placeholder="Enter Coupon Code" />
-          </div>
-          <button>ENTER PIN CODE</button>
-        </div>
-      </div>
-      <button id="apply" class="order w-100">Apply Now</button>
-    </div>
-    <!-- --------------------------------Pop Up Box For Apply Coupon ------------------- -->
+    <script src="script/payment.js"></script>
+    <script src="script/wishlist.js"></script>
+    <script src="script/main.js"></script>
   </body>
-  <!-- <script src="script/wishlist.js"></script> -->
-  <script src="script/bag.js"></script>
-  s
 </html>

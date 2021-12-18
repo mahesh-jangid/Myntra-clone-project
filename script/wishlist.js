@@ -119,8 +119,4 @@ function deleteItem(index) {
   getwishListArray.splice(index, 1);
   localStorage.setItem("WishListItems", JSON.stringify(getwishListArray));
   DisplayWishlistData(getwishListArray);
-
-  // totalWishListitems();
-  // totalBagitems();
 }
-// }
