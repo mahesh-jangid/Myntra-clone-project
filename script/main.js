@@ -190,7 +190,6 @@ profile_icon.addEventListener("click", function () {
 
 // -----------------------------------------------For Adding Wishlist Products -----------------------------///
 
-// var getProddisplay = JSON.parse(localStorage.getItem("AllproductItem")) || [];
 var DOM_bag = document.querySelector("#bag_items");
 var DOM_wish = document.querySelector("#wishlist_items");
 var wishListArray = JSON.parse(localStorage.getItem("WishListItems")) || [];
@@ -218,6 +217,15 @@ function totalWishListitems() {
 
 DisplayData(productData);
 // -------------------------For Displaying All Products-------------------///
+
+// function filterCat() {
+//   var selected = document.querySelector(".category input").value;
+//   console.log(selected);
+//   var filter_list = productData.filter(function (elem) {
+//     return elem.brand_name == selected;
+//   });
+//   DisplayData(filter_list);
+// }
 function DisplayData(productData) {
   document.querySelector(".product_info").innerHTML = "";
   productData.map(function (elem) {
@@ -288,19 +296,7 @@ log_out.addEventListener("click", function (e) {
   localStorage.removeItem("currentLoggedUser");
   window.location = "login.html";
 });
-
-// -------------------------For Wishlist 404 Page-------------------------///
-var wishlist_icon = document.querySelector(".wishlist_icon");
-var totalWishListItems = JSON.parse(localStorage.getItem("WishListItems"));
-console.log(totalWishListItems);
-wishlist_icon.addEventListener("click", function () {
-  if (totalWishListItems === null) {
-    window.location = "wishlistError.html";
-  } else {
-    window.location = "wishlist.html";
-  }
-});
-
+// ---------------------------In profile Section Show User Name-------------------------///
 // -----------------------------------------For Sort Price -------------------------------///
 
 function handlepricesort() {

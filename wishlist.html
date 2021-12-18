@@ -17,7 +17,6 @@
     />
     <link rel="stylesheet" href="Assets/css/home.css" />
     <link rel="stylesheet" href="Assets/css/wishlist.css" />
-        <!-- <link rel="stylesheet" href="signUp.css" /> -->
 
   </head>
   <body>
@@ -64,7 +63,7 @@
           <!------------profile Dropdown-------------------->
           <div class="profile_info">
             <div class="profile_links">
-              <div class="user_name">Mahesh Jangid</div>
+              <div class="user_name"></div>
               <hr />
               <ul>
                 <li><a href="order.html">Order</a></li>
@@ -88,7 +87,7 @@
 
     <!--------------------------Body Section-------------------------->
     <div class="product_container">
-      <h2>My Wishlist <span class="totalWishlist">0</span></h2>
+      <h2>My Wishlist <span class="totalWishlist"></span></h2>
       <!-- ------------------single Product----------------- -->
       <div class="product_info"> </div>
       </div>
@@ -97,4 +96,21 @@
   </body>
   
   <script src="script/wishlist.js"></script>
+  <script>
+    // ---------------------------In profile Section Show User Name-------------------------///
+var currentLoggedUser = JSON.parse(localStorage.getItem("currentLoggedUser"));
+
+var user_name = document.querySelector(".user_name");
+user_name.textContent = `Hello ${currentLoggedUser}`;
+
+var log_out = document.querySelector("#log_out");
+log_out.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  localStorage.removeItem("currentLoggedUser");
+  window.location = "login.html";
+});
+// ---------------------------In profile Section Show User Name-------------------------///
+
+  </script>
 </html>

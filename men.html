@@ -104,10 +104,20 @@
         <div class="filter_info">
           <div class="category pt">
             <h5>CATEGORY</h5>
-            <input type="checkbox" name="t_shirt" id="t_shirt" />
-            <label for="t_shirt">T-shirts</label> <br />
-            <input type="checkbox" name="t_shirt" id="t_shirt" />
-            <label for="t_shirt">Lounge T-shirts</label>
+            <input
+              type="checkbox"
+              name="t_shirt"
+              id="t_shirt"
+              onchange="filterCat()"
+            />
+            <label for="t_shirt" value="t_shirts">T-shirts</label> <br />
+            <input
+              type="checkbox"
+              name="t_shirt"
+              id="t_shirt"
+              onchange="filterCat()"
+            />
+            <label for="t_shirt" value="Lounge T-shirts">Lounge T-shirts</label>
           </div>
           <div class="brand pt">
             <h5>BRAND</h5>
@@ -148,7 +158,24 @@
     </div>
 
     <!----------------------------End of product container--------------------------->
-
+    <script src="script/wishlist.js"></script>
     <script src="script/main.js"></script>
+
+    <!-- ----------------------------------For Empty Wishlist---------------------- -->
+    <script>
+      var wishlist_icon = document.querySelector(".wishlist_icon a");
+      var totalWishListItems = JSON.parse(
+        localStorage.getItem("WishListItems")
+      );
+      console.log(totalWishListItems.length);
+      wishlist_icon.addEventListener("click", function () {
+        if (totalWishListItems.length === 0) {
+          wishlist_icon.href = "wishlistError.html";
+        } else {
+          window.location = "wishlist.html";
+        }
+      });
+    </script>
+    <!-- ----------------------------------For Empty Wishlist---------------------- -->
   </body>
 </html>
