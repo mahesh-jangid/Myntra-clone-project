@@ -1,0 +1,441 @@
+ss a {
+    color: black;
+  }
+  
+  body {
+    font-family: "Shippori Antique", sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    border-bottom: 1px solid rgb(214, 208, 208);
+    height:90px;
+    box-shadow: rgb(0 0 0 / 45%) 0px 4px 49px -25px;
+    transition: height 0.4s ease-in;
+  }
+  
+  .nav_info {
+    display: flex;
+    width: 95%;
+    align-items: center;
+    justify-content: space-between;
+    height: 7rem;
+    margin: auto;
+    transition: height 0.4s ease-in;
+  }
+  .active {
+    height: 6rem;
+  }
+  .nav_info .logo {
+    width: 70px;
+    height: auto;
+  }
+  
+  .nav_info .logo img {
+    width: 150px;
+    height: auto;
+  }
+  .mobile_menu {
+    display: none;
+  }
+  .nav_info .nav_links {
+    flex-basis: 30%;
+  }
+  
+  .nav_info .nav_links ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .nav_info .nav_links ul li {
+    padding: 2.3rem 2rem;
+    list-style-type: none;
+    transition: border 0.4s ease-in;
+    cursor: pointer;
+  }
+  
+  .nav_info .nav_links ul li:nth-child(even):hover {
+    border-bottom: 4px solid #fc427b;
+  }
+  .nav_info .nav_links ul li:nth-child(odd):hover {
+    border-bottom: 4px solid #0be916;
+  }
+  
+  .nav_info .nav_links ul li a {
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(27, 25, 25);
+  }
+  
+  .nav_info .search_bar {
+    width: 27%;
+    padding: 6px 20px;
+    border: 1px solid rgb(230, 227, 227);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(250, 248, 248);
+    border-radius: 9px;
+  }
+  
+  .nav_info .search_bar span {
+    display: grid;
+    place-content: center;
+    margin-right: 4pxs;
+  }
+  
+  .nav_info .search_bar i {
+    color: rgb(10, 10, 10);
+  }
+  
+  .nav_info .search_bar i {
+    color: rgb(10, 10, 10);
+  }
+  
+  .nav_info .search_bar #search_box {
+    width: 100%;
+    height: 100%;
+    padding: 6px 18px;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(250, 248, 248);
+  }
+  
+  /* ----------------for search bg ---------------- */
+  .search_bg_light {
+    background-color: white;
+  }
+  
+  .nav_info .search_bar #search_box:focus {
+    outline: none;
+  }
+  
+  /* ---------------------Desktop Action css------------------------------- */
+  
+  .nav_info .desktop_actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 6rem;
+  }
+  /* ------------------profile CSS----------- */
+  .nav_info .desktop_actions .profile_info {
+    position: absolute;
+    top: 6rem;
+    right: 2.32rem;
+    width: 100%;
+    padding: 4px 8px;
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-top: 3px solid red;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease-in;
+    border-radius: 3px;
+  }
+  
+  .nav_info .desktop_actions .profile_info.show_profile {
+    visibility: visible;
+    opacity: 1;
+  }
+  .nav_info .desktop_actions .profile_info .user_name {
+    padding-left: 20px;
+    font-weight: 900;
+    font-size: 15px;
+  }
+  .nav_info .desktop_actions .profile_info .profile_links ul {
+    padding-left: 20px;
+  }
+  .nav_info .desktop_actions .profile_info .profile_links ul li {
+    list-style-type: none;
+  }
+  .nav_info .desktop_actions .profile_info .profile_links ul li a {
+    text-decoration: none;
+    font-size: 12px;
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: black;
+  }
+  
+  .nav_info .desktop_actions .profile_info .profile_links .welcome_title {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0 8px;
+  }
+  .nav_info .desktop_actions .profile_info .profile_links .signUp li {
+    border: 0.23px solid gray;
+    /* margin-top: 10px; */
+    text-align: center;
+    margin-right: 16px;
+    padding: 6px 19px;
+  }
+  .nav_info .desktop_actions .profile_info .profile_links .signUp li a {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 800;
+    color: #fc427b;
+  }
+  /* ------------------End of profile CSS----------- */
+  
+  .nav_info .desktop_actions .desktop_view {
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .nav_info .desktop_actions .desktop_view .icon a {
+    color: initial;
+  }
+  .nav_info .desktop_actions .desktop_view .icon i {
+    font-size: 17px;
+  }
+  
+  /* -------------selected wishlist item css----------------------  */
+  .nav_info .desktop_actions .desktop_view .wishlist_icon,
+  .nav_info .desktop_actions .desktop_view .bag_icon {
+    position: relative;
+  }
+  
+  .nav_info .desktop_actions .desktop_view   h5{
+    font-size: 12px;
+  }
+  .nav_info .desktop_actions .desktop_view .wishlist_icon span,
+  .nav_info .desktop_actions .desktop_view .bag_icon span {
+    position: absolute;
+    /* display: block; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    width: 19px;
+    height: 19px;
+    background-color: #eb4d4b;
+    color: white;
+    top: -11px;
+    right: 14px;
+  
+    border-radius: 50%;
+  }
+  
+  .nav_info .desktop_actions .desktop_view .title {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 2px;
+  }
+  
+  /* -------------End of selected wishlist item css----------------------  */
+  
+  /* -------------Carousel CSS----------------------  */
+  
+  .carousel {
+    margin-top: 5rem;
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  .carousel .btn_cont {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 97%;
+    margin: auto;
+  }
+  
+  .carousel .btn_cont i {
+    font-size: 30px;
+    color: tomato;
+    cursor: pointer;
+  }
+  
+  .carousel img {
+    width: 100%;
+    height: 100%;
+  }
+/* -------------------------------------Media Query CSS-------------------------------------- */
+@media only screen and (min-width: 0px) and (max-width: 465px) {
+    .navbar {
+      height: 5rem;
+    }
+    .nav_info {
+      width: 100%;
+      height: 5rem;
+    }
+    .nav_info .search_bar {
+      display: none;
+    }
+    .mobile_menu {
+      display: block;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .mobile_menu i {
+      font-size: 20px;
+      color: #eb4d4b;
+      cursor: pointer;
+    }
+    .nav_info .nav_links {
+      display: none;
+    }
+    .desktop_actions {
+      margin-right: 10px;
+    }
+    .nav_info .logo img {
+      width: 60px;
+      height: auto;
+    }
+    .carousel {
+      height: 150px;
+    }
+
+  }
+
+  /* //main div */
+  
+  .main {
+    display: grid;
+    height: 520px;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #fdeeef;
+  }
+  .main > div {
+    width: 28%;
+    
+    background-color: white;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  /* inside main one div for all content and inside this two divs  image and link */
+  .main > div > div:nth-child(1) {
+    margin-top: 40px;
+    width: 40%;
+  
+    margin-left: 50px;
+  }
+  .main > div > div:nth-child(2) {
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    height: 60%;
+  }
+  
+  /* input fields */
+  .inputfield > div {
+    margin: 10px;
+  }
+  .full-input {
+    display: flex;
+    border: 2px solid rgb(49, 49, 58);
+    height: 40px;
+    border: 1px solid #d4d5d9;
+  }
+  input {
+    outline: none;
+    border: none;
+    line-height: 1.2em;
+    font-size: 15px;
+  }
+  label {
+    font-size: 18px;
+    margin-top: 7px;
+    margin-left: 5px;
+  }
+  
+  .welcome {
+    font-size: 22px;
+    font-weight: 550;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+  .midLinks a {
+    cursor: pointer;
+    color: #ff3c6f;
+    font-weight: 500;
+  }
+  .midLinks {
+    font-family: WhitneySSm, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    padding: 15px;
+    padding-left: 0px;
+    text-align: start;
+  }
+  .login {
+    font-family: WhitneySSm, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #424553;
+    height: 40px;
+    margin: auto;
+  }
+  .login > span {
+    cursor: pointer;
+    color: #ff3c6f;
+    font-weight: 500;
+  }
+  
+  /* verificition part */
+  .img > img {
+    width: 60%;
+    height: 6 0%;
+  }
+  
+  .fullInput {
+    width: 60%;
+    height: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+  }
+  .fullInput > div {
+    width: 50%;
+    border: 1px solid #d4d5d9;
+  }
+  #number1,
+  #number2,
+  #number3,
+  #number4 {
+    width: 60%;
+    height: 90%;
+    border: 1px solid #d4d5d9 transparent;
+  }
+  
+  @media only screen and (min-width: 375px) and (max-width: 768px) {
+    .main > div {
+      width: 40%;
+      background-color: white;
+      margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: 375px) {
+    .main {
+      display: grid;
+      grid-template-columns: auto;
+      background-color: #fdeeef;
+    }
+    .main > div {
+      width: 40%;
+      margin-left: 40px;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+  

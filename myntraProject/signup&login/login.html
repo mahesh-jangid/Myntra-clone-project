@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600&family=Shippori+Antique&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css".css" />
+    <title>
+      Online Shoping for Men,Women,Kids Fashion and Lifestyle - Myntra
+    </title>
+    <script src="log.js"></script>
+  </head>
+  <body>
+    <!--------------------------Start Navbar ----------------------------->
+    <div class="navbar">
+      <div class="nav_info">
+        <div class="logo">
+          <img src="images/logo.png" alt="logo image" />
+        </div>
+        <div class="nav_links">
+          <ul>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="men.html">Women</a></li>
+            <li><a href="men.html">Kids</a></li>
+            <li><a href="men.html">Beauty</a></li>
+          </ul>
+        </div>
+
+        <div class="search_bar">
+          <span><i class="fas fa-search"></i></span>
+          <input type="text" id="search_box" placeholder="Search here...." />
+        </div>
+        <div class="desktop_actions">
+          <div class="profile_section desktop_view">
+            <div class="icon user_icon">
+              <a href="###"><i class="far fa-user"></i></a>
+            </div>
+            <div class="title user_title">Profile</div>
+          </div>
+          <div class="wishlist_section desktop_view">
+            <div class="icon wishlist_icon">
+              <a href="wishlist.html"><i class="far fa-heart"></i></a>
+              <span><h5 id="wishlist_items">2</h5></span>
+            </div>
+            <div class="title wishlist_title">Wishlist</div>
+          </div>
+          <div class="bag_section desktop_view">
+            <div class="icon bag_icon">
+              <a href="bag.html"><i class="fas fa-shopping-bag"></i></a>
+              <span><h5 id="bag_items">5</h5></span>
+            </div>
+            <div class="title bag_title">Bag</div>
+          </div>
+          <!------------profile Dropdown-------------------->
+          
+          <div class="profile_info">
+            <div class="profile_links">
+              <div class="welcome_title">
+                Welcome <br />
+                To Access Account
+              </div>
+              <hr />
+              <ul class="signUp">
+                <li><a href="signUp.html">LOGIN/SIGNUP</a></li>
+              </ul>
+            </div>
+          </div>
+          <!------------End of profile Dropdown-------------------->
+        </div>
+        <div class="mobile_menu">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+
+            <!-- main div  for content-->
+            <div class="main">
+                <div class="content">
+                    <div><h3>LOGIN WITH EMAIL</h3></div>
+                    <div class="fdiv">
+                        <input type='text' name='number' id="number" placeholder="  Email*" />
+                    </div>
+                    <div class='full-input'>
+                        <input type='text' name='number' id="number" placeholder="  Password*">
+                    </input>
+                    </div>
+                    <div><button type="submit" id="button" onclick="auth()"><span>LOGIN</span></button></div>
+                    <div class="login">Forgot your Password?<span> Reset Here</span></div>
+                    <div class="gethelp">Have trouble logging in? <span>Get help</span></div>
+                </div>
+              </div>
+             
+          </div>
+      </div>
+
+</body>
+</html>
