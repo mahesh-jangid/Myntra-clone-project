@@ -61,6 +61,9 @@ body {
   transition: border 0.4s ease-in;
   cursor: pointer;
 }
+.mobo_links{
+  display: none;
+}
 
 .nav_info .nav_links ul li:nth-child(even):hover {
   border-bottom: 4px solid #fc427b;
@@ -87,6 +90,8 @@ body {
   background-color: rgb(250, 248, 248);
   border-radius: 9px;
 }
+
+
 
 .nav_info .search_bar span {
   display: grid;
@@ -177,7 +182,6 @@ body {
 }
 .nav_info .desktop_actions .profile_info .profile_links .signUp li {
   border: 0.23px solid gray;
-  /* margin-top: 10px; */
   text-align: center;
   margin-right: 16px;
   padding: 6px 19px;
@@ -215,7 +219,6 @@ body {
 .nav_info .desktop_actions .desktop_view .wishlist_icon span,
 .nav_info .desktop_actions .desktop_view .bag_icon span {
   position: absolute;
-  /* display: block; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -515,6 +518,55 @@ body {
     width: 60px;
     height: auto;
   }
+/* --------------Mobo Links------------ */
+.mobo_links {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: block;
+  height: 250px;
+  transform: translateY(-100%);
+  background-color: #eb4d4b;
+  transition: transform .5s ease-in-out;
+}
+
+
+
+.mobo_links ul {
+  text-align: center;
+  background-color: #eb4d4b;
+  
+  display: grid;
+  place-content: center;
+
+  transition: transform .5s ease-in-out;
+}
+
+.mobo_links ul li {
+  list-style: none;
+  margin: 10px 0;
+
+}
+
+.mobo_links ul li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  transition: all .4s ease-in-out;
+}
+
+.mobo_links ul li a:hover {
+  color: rgb(41, 38, 38);
+}
+
+/* --------------Mobo Links------------ */
+  .show_mobo_link {
+    transform: translateY(3%);
+
+    
+  }
   .carousel {
     height: 150px;
   }
@@ -576,6 +628,7 @@ body {
     margin-bottom: 0px;
 
   }
+
 
   .main .product_container .product_info .product .content p {
     margin-bottom: 0px;
@@ -656,3 +709,5 @@ body {
     font-size: 11px;
   }
 }
+
+

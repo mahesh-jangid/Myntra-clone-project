@@ -293,7 +293,7 @@ body.show_modal {
   }
   .main .left .left_info .bag_prod .prod_cont .info img {
       min-width: 77%;
-      max-height: 44%;
+          min-height: 43%;
   }
   .main .left .left_info .prod_cont {
 
