@@ -1,6 +1,6 @@
 # Myntra Website Clone Project
 
-## Hosted Myntra Clone Website Link : https://mahesh-jangid.github.io/Myntra-clone-project/
+Hosted Myntra Clone Website Link : https://mahesh-jangid.github.io/Myntra-clone-project/
 
 ## Features
 
