@@ -9,9 +9,9 @@ var total_amount = document.querySelector(".total_amount");
 DOM_total.textContent = total_amt;
 total_discount.textContent = discount;
 total_amount.textContent = total;
-SubTotal();
 
-var buy_btn = document.querySelector("#buy");
+var buy_btn = document.querySelector("button#buy");
+console.log(buy_btn);
 var back_home_btn = document.querySelector("#apply");
 buy_btn.addEventListener("click", function () {
   window.location = "checkout.html";
@@ -19,3 +19,7 @@ buy_btn.addEventListener("click", function () {
 back_home_btn.addEventListener("click", function () {
   window.location = "home.html";
 });
+
+function change() {
+  var buy_btn = document.querySelector("#buy");
+}

@@ -270,7 +270,7 @@ body.show_modal {
 /* ---------------------------------------Payment page CSS--------------------------------- */
 
 /* -------------------------------Media Query-------------------------------------------// */
-@media only screen and (min-width: 0px) and (max-width: 730px) {
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
   .main {
     width: 92%;
     grid-template-columns: repeat(1, 1fr);
@@ -307,15 +307,6 @@ body.show_modal {
       height: 5rem;
   }
 }
-@media only screen and (min-width: 730px) and (max-width: 1024px) {
-  .main {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: auto;
-    place-content: center;
-    margin-top: 1rem;
-  }
-}
+
 
 /* -------------------------------Media Query-------------------------------------------// */
