@@ -12,28 +12,20 @@ We have covered these features in this website which is mention below :-
 6. Payment Page
 7. Address page
 
-# Team Member:
+## Team Member:
 
 ## We have six member team group :
 
-# Mahesh Jangid
-
-# Ashish Kumar
-
-# M GNANENDRA REDDY
-
-# Aniruddha Nalage
-
-# Rohit Singh
+1. Mahesh Jangid
+2. Ashish Kumar
+3. M GNANENDRA REDDY
+4. Aniruddha Nalage
+5. Rohit Singh
 
 ## Techologies Used :
 
-# HTML
-
-# CSS
-
-# JAVASCRIPT
-
-# MEDIA QUERY
-
-# GIT
+1. HTML
+2. CSS
+3. JAVASCRIPT
+4. MEDIA QUERY
+5. GIT
