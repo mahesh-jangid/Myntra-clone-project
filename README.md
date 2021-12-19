@@ -16,7 +16,7 @@ We have covered these features in this website which is mention below :-
 
 ## Team Member:
 
-## We have six member team group :
+We have six member team group :
 
 1. Mahesh Jangid
 2. Ashish Kumar
