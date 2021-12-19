@@ -35,7 +35,6 @@ function DisplayBagData(AllbagProdArray) {
         deleteItem(index);
         totalBagitems();
         totalWishListitems();
-        // DisplayBagData(AllbagProdArray);
       });
     });
   });
@@ -62,7 +61,9 @@ AllbagProdArray.map(function (elem) {
 var total_amt = total_amount.reduce(function (total, price) {
   total += price;
   return total;
-});
+}, 0);
+
+localStorage.setItem("TotalMRP", JSON.stringify(total_amt));
 DOM_total.textContent = total_amt;
 total_sub.textContent = total_amt;
 
@@ -80,7 +81,6 @@ remove_all.addEventListener("click", function () {
 var Total_Bag_Item = document.querySelector(".total_item");
 var Total_Selected_Item = document.querySelector(".total_selected");
 var totalLength = AllbagProdArray.length;
-console.log(AllbagProdArray);
 Total_Bag_Item.textContent = totalLength;
 Total_Selected_Item.textContent = totalLength;
 // ---------------------------Bag Total Items Display ------------------------------------/////
@@ -111,7 +111,7 @@ function SubTotal() {
     var coupon_value = document.querySelector("input#coupon").value;
     var total_discount = document.querySelector(".total_discount");
     var total_amount = document.querySelector(".total_amount");
-    if (coupon_value === "mahesh") {
+    if (coupon_value === "Mahesh63") {
       var discount = (total_amt * 60) / 100;
       total_discount.textContent = discount;
       localStorage.setItem("Discount", JSON.stringify(discount));

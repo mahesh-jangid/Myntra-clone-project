@@ -23,7 +23,6 @@ function totalWishListitems() {
 
   DOMWishlist.textContent = TotalWishListItem;
   localStorage.setItem("totalWishListItems", JSON.stringify(TotalWishListItem));
-  // DisplayWishlistData(getwishListArray);
 }
 
 function totalBagitems() {
@@ -33,7 +32,6 @@ function totalBagitems() {
 
   DOM_bag.textContent = totalBagitems;
   localStorage.setItem("totalBagItems", JSON.stringify(totalBagitems));
-  // DisplayWishlistData(getwishListArray);
 }
 
 function DisplayWishlistData(getwishListArray) {

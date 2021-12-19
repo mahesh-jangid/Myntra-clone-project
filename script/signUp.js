@@ -28,7 +28,6 @@ function auth() {
 
 // ------------------------login UserData --------------------------//
 var regdUserData = JSON.parse(localStorage.getItem("userDataBase"));
-console.log(regdUserData);
 
 var sign_in_btn = document.querySelector("#button");
 
@@ -56,7 +55,6 @@ sign_in_btn.addEventListener("click", function () {
 
         break;
       } else {
-        // alert("Login Faliled!!");
         alert_container.classList.add("show_pop_up");
         alert_pop_up.textContent = "Oops!! login failed!";
         alert_pop_up.style.color = "red";
