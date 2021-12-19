@@ -490,6 +490,7 @@ body {
 @media only screen and (min-width: 0px) and (max-width: 465px) {
   .navbar {
     height: 5rem;
+    z-index: 900;
   }
   .nav_info {
     width: 100%;
@@ -527,7 +528,8 @@ body {
   width: 100%;
   display: block;
   height: 250px;
-  transform: translateY(-100%);
+    transform: translateY(-183%);
+    z-index: 1;
   background-color: #eb4d4b;
   transition: transform .5s ease-in-out;
 }

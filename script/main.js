@@ -192,9 +192,7 @@ profile_icon.addEventListener("click", function () {
 var mobile_menu = document.querySelector(".mobile_menu i");
 mobile_menu.addEventListener("click", function () {
   var mobo_links = document.querySelector(".mobo_links");
-  var mobo_links_ul = document.querySelector(".mobo_links ul");
   mobo_links.classList.toggle("show_mobo_link");
-  mobo_links_ul.classList.toggle("show_mobo_link");
 });
 // --------------------Mobile Links -----------------//
 
