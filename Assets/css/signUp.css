@@ -1,5 +1,5 @@
  a {
-   color: #ff3c6f;
+   color: #ff3c6f ;
  }
 
  body {
@@ -88,6 +88,8 @@
    border: none;
    line-height: 1.2em;
    font-size: 15px;
+       margin-left: 18px;
+     
  }
 
  label {
@@ -174,7 +176,7 @@
 
  @media only screen and (min-width: 375px) and (max-width: 768px) {
    .main>div {
-     width: 60%;
+        width: 60%;
      background-color: white;
      margin: auto;
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -189,10 +191,23 @@
    }
 
    .main>div {
-     width: 60%;
+    
+      width: 96%;
      margin-left: 35px;
      background-color: white;
      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
    }
+   input{
+       font-size: 13px;
+       margin-bottom: 6px;
+   }
+   .inputfield>div {
+     margin: 11px;
+   }
+label {
+  font-size: 11px;
+  margin-top: 7px;
+  margin-left: 5px;
+}
  }
      
