@@ -2,6 +2,7 @@
   color: black;
 }
 
+
 body {
   font-family: "Shippori Antique", sans-serif;
   text-decoration: none;
@@ -526,7 +527,9 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  display: block;
+  display:flex ;
+  align-items: center;
+  justify-content: center;
   height: 250px;
     transform: translateY(-183%);
     z-index: 1;
@@ -537,11 +540,12 @@ body {
 
 
 .mobo_links ul {
-  text-align: center;
-  background-color: #eb4d4b;
-  
+  width: 100%;
   display: grid;
   place-content: center;
+  text-align: center;
+  background-color: #eb4d4b;
+  margin-right: 20px;
 
   transition: transform .5s ease-in-out;
 }

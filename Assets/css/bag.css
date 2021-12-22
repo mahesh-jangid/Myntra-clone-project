@@ -209,9 +209,11 @@ p {
 }
 .pop_up_container {
   position: absolute;
-  top: 2%;
-  left: 17%;
-  transform: translate(50%, 50%);
+  top: 16%;
+  left: 50%;
+  /* top: 2%;
+  left: 17%; */
+  transform: translate(-50%, 50%);
   border: 1px solid rgb(212, 203, 203);
   background-color: white;
   padding: 10px 16px;
@@ -306,6 +308,19 @@ body.show_modal {
       width: 80%;
       height: 5rem;
   }
+ 
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 575px) {
+ .pop_up_container {
+   width: 90%;
+ }
+}
+@media only screen and (min-width: 575px) and (max-width: 1024px) {
+ .pop_up_container {
+   width: 70%;
+ }
 }
 
 
