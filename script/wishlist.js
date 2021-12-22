@@ -32,6 +32,7 @@ function totalBagitems() {
 
   DOM_bag.textContent = totalBagitems;
   localStorage.setItem("totalBagItems", JSON.stringify(totalBagitems));
+
 }
 
 function DisplayWishlistData(getwishListArray) {
@@ -88,7 +89,6 @@ function DisplayWishlistData(getwishListArray) {
         totalBagitems();
       });
     });
-    // localStorage.setItem("AllBagItems", JSON.stringify(getwishListArray));
   });
 }
 
