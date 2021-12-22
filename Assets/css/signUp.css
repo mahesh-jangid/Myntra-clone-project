@@ -209,5 +209,14 @@ label {
   margin-top: 7px;
   margin-left: 5px;
 }
+.alert_pop_up{
+      width: 55%;
+      margin: auto;
+      left: 22%;
+      height: 4%;
+}
+.alert_pop_up span{
+  font-size: 10px;
+}
  }
      
