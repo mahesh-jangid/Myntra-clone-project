@@ -1,22 +1,25 @@
 # Myntra Website Clone Project
 
-Hosted Myntra Clone Website Link : https://mahesh-jangid.github.io/Myntra-clone-project/
+This is the clone of Myntra website which is an Indian fashion e-commerce company for online shopping lifestyle products. We started this project as a five member team during construct week organised at Masai School.
 
-## Features
 
-We have covered these features in this website which is mention below :-
+## Pages Build :-
 
-1. Home Page
-2. In home page SignUp & Login
-3. Inside Men section T-shirt Category Page created
-4. Wishlist Seperate Page
-5. Add_to_bag Seperate Page
+1. Landing Page
+3. Men T-shirt Category Page 
+4. Wishlist Page
+5. cart Page
 6. Payment Page
 7. Address page
 
-## Team Member:
+## Added Functionalities
 
-We have six member team group :
+* SignIn/SignUp
+* Add to Cart products
+* Sorting by price
+* Quantity change Functionality
+
+## Team Member:
 
 1. Mahesh Jangid
 2. Ashish Kumar
@@ -26,8 +29,12 @@ We have six member team group :
 
 ## Techologies Used :
 
-1. HTML
-2. CSS
-3. JAVASCRIPT
-4. MEDIA QUERY
-5. GIT
+* HTML
+* CSS
+* JAVASCRIPT
+* LocalStorage
+
+## Demo Link
+
+https://mahesh-jangid.github.io/Myntra-clone-project/
+
